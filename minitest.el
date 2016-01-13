@@ -108,7 +108,7 @@ The current directory is assumed to be the project's root otherwise."
       (error "Buffer is not visiting a file"))))
 
 (defun minitest--test-name-flag (test-name)
-  (let ((flag (format "-n/%s/" test-name)))
+  (let ((flag (format "-n%s" test-name)))
     (cond (minitest-use-spring (concat "TESTOPTS=" flag))
           (t flag))))
 
